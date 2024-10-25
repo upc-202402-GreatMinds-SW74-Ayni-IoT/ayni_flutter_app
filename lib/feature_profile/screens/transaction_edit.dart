@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ayni_flutter_app/finance_screens/models/transaction.dart';
+import 'package:ayni_flutter_app/feature_profile/models/transaction.dart';
 
 
 class EditTransactionScreen extends StatefulWidget {
   final Transaction transaction;
 
-  EditTransactionScreen({required this.transaction});
+  const EditTransactionScreen({super.key, required this.transaction});
 
   @override
   _EditTransactionScreenState createState() => _EditTransactionScreenState();

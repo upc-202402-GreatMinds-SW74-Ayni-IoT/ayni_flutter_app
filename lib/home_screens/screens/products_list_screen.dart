@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ayni_flutter_app/home_screens/screens/crops_list_screen.dart';
 import 'package:ayni_flutter_app/home_screens/services/products_service.dart';
 import 'package:ayni_flutter_app/home_screens/models/products.dart';
-import 'package:ayni_flutter_app/finance_screens/screens/transaction_panels.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/transaction_panels.dart';
 import 'package:ayni_flutter_app/shared/widgets/bottom_navigation_bar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -172,7 +172,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                                 ],
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               height: 200,
                               child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
@@ -233,9 +233,8 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                                           style: const TextStyle(fontSize: 16)),
                                       Text(
                                         _products[index].description.length > 50
-                                            ? _products[index].description
-                                                    .substring(0, 50) +
-                                                '...'
+                                            ? '${_products[index].description
+                                                    .substring(0, 50)}...'
                                             : _products[index].description,
                                         style: const TextStyle(color: Colors.grey),
                                       ),
@@ -292,7 +291,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
               Text(_searchResults[index].name, style: const TextStyle(fontSize: 16)),
               Text(
                 _searchResults[index].description.length > 50
-                    ? _searchResults[index].description.substring(0, 50) + '...'
+                    ? '${_searchResults[index].description.substring(0, 50)}...'
                     : _searchResults[index].description,
                 style: const TextStyle(color: Colors.grey),
               ),

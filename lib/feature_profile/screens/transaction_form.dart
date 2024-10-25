@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ayni_flutter_app/finance_screens/models/transaction.dart';
+import 'package:ayni_flutter_app/feature_profile/models/transaction.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
 
@@ -202,10 +202,10 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                         }  
                       },  
                       style: ButtonStyle(  
-                        backgroundColor: MaterialStateProperty.all(Colors.green),  
-                        foregroundColor: MaterialStateProperty.all(Colors.white),  
-                        elevation: MaterialStateProperty.all(4.0),  
-                        shape: MaterialStateProperty.all(  
+                        backgroundColor: WidgetStateProperty.all(Colors.green),  
+                        foregroundColor: WidgetStateProperty.all(Colors.white),  
+                        elevation: WidgetStateProperty.all(4.0),  
+                        shape: WidgetStateProperty.all(  
                           RoundedRectangleBorder(  
                             borderRadius: BorderRadius.circular(10.0),  
                           ),  

@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:ayni_flutter_app/finance_screens/models/transaction.dart';
+import 'package:ayni_flutter_app/feature_profile/models/transaction.dart';
 
 class TransactionService {
-  final String baseUrl = "https://ayni-api-v2.zeabur.app/api/v1/transactions";
+  final String baseUrl = "https://ayni-v1.sfo1.zeabur.app/api/v1/transactions";
 
   Future<List> getAll() async {
     final http.Response response = await http.get(Uri.parse(baseUrl));

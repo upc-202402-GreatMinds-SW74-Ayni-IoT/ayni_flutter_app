@@ -4,7 +4,7 @@ import 'package:ayni_flutter_app/feature_orders/models/orders.dart';
 import 'package:http/http.dart' as http;
 
 class OrdersService {
-  final String baseUrl = "https://ayni-api-v2.zeabur.app/api/v1/orders";
+  final String baseUrl = "https://ayni-v1.sfo1.zeabur.app/api/v1/orders";
 
   Future<List> getAll() async {
     final response = await http.get(

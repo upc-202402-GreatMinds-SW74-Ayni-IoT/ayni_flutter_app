@@ -5,7 +5,7 @@ import 'package:ayni_flutter_app/home_screens/models/crops.dart';
 import 'package:http/http.dart' as http;
 
 class CropsService {
-  final String baseUrl = "https://ayni-api-v2.zeabur.app/api/v1/crops";
+  final String baseUrl = "https://ayni-v1.sfo1.zeabur.app/api/v1/crops";
 
   Future<List> getAll(int page) async {
     http.Response response = await http.get(Uri.parse("$baseUrl?page=$page"));

@@ -3,10 +3,10 @@ import 'package:ayni_flutter_app/home_screens/screens/crops_list_screen.dart';
 import 'package:ayni_flutter_app/home_screens/screens/products_list_screen.dart';
 import 'package:ayni_flutter_app/feature_orders/screens/sales_list_screen.dart';
 import 'package:ayni_flutter_app/shared/widgets/bottom_navigation_bar.dart';
-import 'package:ayni_flutter_app/finance_screens/models/transaction.dart';
-import 'package:ayni_flutter_app/finance_screens/services/transaction_service.dart';
-import 'package:ayni_flutter_app/finance_screens/screens/transaction_form.dart';
-import 'package:ayni_flutter_app/finance_screens/screens/transaction_edit.dart';
+import 'package:ayni_flutter_app/feature_profile/models/transaction.dart';
+import 'package:ayni_flutter_app/feature_profile/services/transaction_service.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/transaction_form.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/transaction_edit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TransactionListScreen2 extends StatefulWidget {
@@ -101,7 +101,7 @@ class _TransactionListScreenState extends State<TransactionListScreen2> {
             scrollDirection: Axis.horizontal,
             child: DataTable(
               headingRowColor:
-                  MaterialStateColor.resolveWith((states) => Colors.green),
+                  WidgetStateColor.resolveWith((states) => Colors.green),
               columns: const [
                 DataColumn(
                     label: Text('Name', style: TextStyle(color: Colors.white))),
@@ -135,13 +135,13 @@ class _TransactionListScreenState extends State<TransactionListScreen2> {
           ),
         ],
       ),
-      floatingActionButton: Container(
+      floatingActionButton: SizedBox(
         width: MediaQuery.of(context).size.width * 0.9,
         child: FloatingActionButton.extended(
           onPressed: () async {
             final newTransaction = await Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AddTransactionScreen()),
+              MaterialPageRoute(builder: (context) => const AddTransactionScreen()),
             );
             if (newTransaction != null) {
               _addTransaction(newTransaction);
@@ -159,11 +159,11 @@ class _TransactionListScreenState extends State<TransactionListScreen2> {
           switch (index) {
             case 0:
               Navigator.push(
-                  context, SlideTransitionPageRoute(page: ProductsListScreen()));
+                  context, SlideTransitionPageRoute(page: const ProductsListScreen()));
               break;
             case 1:
               Navigator.push(
-                  context, SlideTransitionPageRoute(page: CropsListScreen()));
+                  context, SlideTransitionPageRoute(page: const CropsListScreen()));
               break;
             case 2:
               Navigator.push(
@@ -171,7 +171,7 @@ class _TransactionListScreenState extends State<TransactionListScreen2> {
               break;
             case 3:
               Navigator.push(
-                  context, SlideTransitionPageRoute(page: TransactionListScreen2()));
+                  context, SlideTransitionPageRoute(page: const TransactionListScreen2()));
               break;
           }
         },

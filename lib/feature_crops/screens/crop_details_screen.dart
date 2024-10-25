@@ -1,5 +1,5 @@
 import 'package:ayni_flutter_app/feature_crops/screens/create_crop_screen.dart';
-import 'package:ayni_flutter_app/finance_screens/screens/transaction_panels.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/transaction_panels.dart';
 import 'package:ayni_flutter_app/home_screens/models/products.dart';
 import 'package:ayni_flutter_app/home_screens/screens/crops_list_screen.dart';
 import 'package:ayni_flutter_app/home_screens/screens/products_list_screen.dart';
@@ -76,11 +76,11 @@ class CropDetailsScreen extends StatelessWidget {
           switch(index){
             case 0:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => ProductsListScreen()));
+                builder: (context) => const ProductsListScreen()));
               break;
             case 1:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => CropsListScreen()));
+                builder: (context) => const CropsListScreen()));
               break;
             case 2:
               Navigator.push(context, MaterialPageRoute(
@@ -88,7 +88,7 @@ class CropDetailsScreen extends StatelessWidget {
               break;
             case 3:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => TransactionListScreen2()));
+                builder: (context) => const TransactionListScreen2()));
               break;
           }
         }),

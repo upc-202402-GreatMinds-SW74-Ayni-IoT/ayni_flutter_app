@@ -5,7 +5,7 @@ import 'package:ayni_flutter_app/feature_orders/models/sales_response.dart';
 import 'package:http/http.dart' as http;
 
 class SalesService {
-  final String baseUrl = "https://ayni-api-v2.zeabur.app/api/v1/sales";
+  final String baseUrl = "https://ayni-v1.sfo1.zeabur.app/api/v1/sales";
 
   Future<List> getAll() async {
     http.Response response = await http.get(Uri.parse(baseUrl));

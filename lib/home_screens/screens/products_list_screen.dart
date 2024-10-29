@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ayni_flutter_app/home_screens/screens/crops_list_screen.dart';
 import 'package:ayni_flutter_app/home_screens/services/products_service.dart';
 import 'package:ayni_flutter_app/home_screens/models/products.dart';
-import 'package:ayni_flutter_app/feature_profile/screens/transaction_panels.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/profile_screen.dart';
 import 'package:ayni_flutter_app/shared/widgets/bottom_navigation_bar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -269,7 +269,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
               break;
             case 3:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => const TransactionListScreen2()));
+                builder: (context) => const ProfileScreen()));
               break;
           }
         }),

@@ -1,6 +1,6 @@
 import 'package:ayni_flutter_app/feature_orders/models/sales.dart';
 import 'package:ayni_flutter_app/feature_orders/services/sales_service.dart';
-import 'package:ayni_flutter_app/feature_profile/screens/transaction_panels.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/profile_screen.dart';
 import 'package:ayni_flutter_app/home_screens/screens/crops_list_screen.dart';
 import 'package:ayni_flutter_app/home_screens/screens/products_list_screen.dart';
 import 'package:ayni_flutter_app/feature_orders/models/orders.dart';
@@ -126,7 +126,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                 break;
               case 3:
                 Navigator.push(context,
-                    SlideTransitionPageRoute(page: const TransactionListScreen2()));
+                    SlideTransitionPageRoute(page: const ProfileScreen()));
                 break;
             }
           }),

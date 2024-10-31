@@ -1,5 +1,7 @@
 import 'package:ayni_flutter_app/feature_crops/screens/create_crop_screen.dart';
-import 'package:ayni_flutter_app/finance_screens/screens/transaction_panels.dart';
+import 'package:ayni_flutter_app/feature_crops/screens/crop_dashboard_details.dart';
+import 'package:ayni_flutter_app/feature_profile/screens/profile_screen.dart';
+
 import 'package:ayni_flutter_app/home_screens/models/products.dart';
 import 'package:ayni_flutter_app/home_screens/screens/crops_list_screen.dart';
 import 'package:ayni_flutter_app/home_screens/screens/products_list_screen.dart';
@@ -62,25 +64,25 @@ class CropDetailsScreen extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) => CreateCropScreen(product: product),
-            ));
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.add, color: Colors.white),
-      ),
+floatingActionButton: FloatingActionButton(
+  onPressed: () {
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) => DashboardScreen(),
+    ));
+  },
+  backgroundColor: Colors.green,
+  child: const Icon(Icons.skip_next, color: Colors.white),
+),
       bottomNavigationBar: BottomNavBar(currentIndex: 0, 
         onTap: (index){
           switch(index){
             case 0:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => ProductsListScreen()));
+                builder: (context) => const ProductsListScreen()));
               break;
             case 1:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => CropsListScreen()));
+                builder: (context) => const CropsListScreen()));
               break;
             case 2:
               Navigator.push(context, MaterialPageRoute(
@@ -88,7 +90,7 @@ class CropDetailsScreen extends StatelessWidget {
               break;
             case 3:
               Navigator.push(context, MaterialPageRoute(
-                builder: (context) => TransactionListScreen2()));
+                builder: (context) => const ProfileScreen()));
               break;
           }
         }),

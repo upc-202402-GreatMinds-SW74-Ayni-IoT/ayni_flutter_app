@@ -26,7 +26,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (response.statusCode == 201) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => LoginScreen()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
       // Registro exitoso
     } else {
@@ -72,10 +72,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ElevatedButton(  
                     onPressed: _register,  
                     style: ButtonStyle(  
-                      backgroundColor: MaterialStateProperty.all(Colors.green),  
-                      foregroundColor: MaterialStateProperty.all(Colors.white),  
-                      elevation: MaterialStateProperty.all(4.0),  
-                      shape: MaterialStateProperty.all(  
+                      backgroundColor: WidgetStateProperty.all(Colors.green),  
+                      foregroundColor: WidgetStateProperty.all(Colors.white),  
+                      elevation: WidgetStateProperty.all(4.0),  
+                      shape: WidgetStateProperty.all(  
                         RoundedRectangleBorder(  
                           borderRadius: BorderRadius.circular(10.0),  
                         ),  

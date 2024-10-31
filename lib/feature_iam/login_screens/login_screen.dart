@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ProductsListScreen()),
+        MaterialPageRoute(builder: (context) => const ProductsListScreen()),
       );
     } else {
       // Error en el inicio de sesión
@@ -77,10 +77,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ElevatedButton(  
                     onPressed: _login,  
                     style: ButtonStyle(  
-                      backgroundColor: MaterialStateProperty.all(Colors.green),  
-                      foregroundColor: MaterialStateProperty.all(Colors.white),  
-                      elevation: MaterialStateProperty.all(4.0),  
-                      shape: MaterialStateProperty.all(  
+                      backgroundColor: WidgetStateProperty.all(Colors.green),  
+                      foregroundColor: WidgetStateProperty.all(Colors.white),  
+                      elevation: WidgetStateProperty.all(4.0),  
+                      shape: WidgetStateProperty.all(  
                         RoundedRectangleBorder(  
                           borderRadius: BorderRadius.circular(10.0),  
                         ),  

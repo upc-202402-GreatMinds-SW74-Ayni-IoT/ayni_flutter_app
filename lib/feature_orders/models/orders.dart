@@ -13,13 +13,13 @@ class Orders {
     });
     int? id;
     final String? description;
-    final double? totalPrice;
+    final int? totalPrice;
     final int? quantity;
     final String? paymentMethod;
     final int? saleId;
     final int? orderedBy;
     final int? acceptedBy;
-    final int? orderedDate;
+    final String? orderedDate;
     final String? status;
 
     factory Orders.fromJson(Map<String, dynamic> json){ 

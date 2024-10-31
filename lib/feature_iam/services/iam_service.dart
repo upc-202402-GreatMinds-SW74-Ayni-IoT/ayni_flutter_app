@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class AuthService {
-  final String baseUrl = 'https://ayni-api-v2.zeabur.app/api/v1/auth';
+  final String baseUrl = 'https://ayni-v1.sfo1.zeabur.app/api/v1/auth';
 
   Future<http.Response> signIn(String username, String password) async {
     final url = Uri.parse('$baseUrl/signin');

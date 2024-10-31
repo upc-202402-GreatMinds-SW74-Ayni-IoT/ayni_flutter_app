@@ -27,11 +27,11 @@ class BottomNavBarState extends State<BottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.shopping_cart),
-          label: 'Sales',
+          label: 'Orders',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.money),
-          label: 'Transactions',
+          icon: Icon(Icons.person),
+          label: 'Profile',
         ),
       ],
       currentIndex: widget.currentIndex,

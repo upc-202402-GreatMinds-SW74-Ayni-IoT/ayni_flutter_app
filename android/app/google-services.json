@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "60205691844",
+    "project_id": "ayni-mobileapp",
+    "storage_bucket": "ayni-mobileapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60205691844:android:19e9bf5e0dc5c0b224ea91",
+        "android_client_info": {
+          "package_name": "com.ayni.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4zy4eCKO968tLuTuQQlH8P3PODtq4Aw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

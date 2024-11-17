@@ -1,11 +1,17 @@
+import 'package:ayni_flutter_app/home_screens/models/crops.dart';
+import 'package:ayni_flutter_app/home_screens/models/sensor.dart';
 import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart' as graphic;
 
+import '../../home_screens/services/crops_service.dart';
+
 class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
+  final Sensor? sensor;
+  const DashboardScreen({super.key, required this.sensor});
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Potato'),
@@ -31,10 +37,9 @@ class DashboardScreen extends StatelessWidget {
               height: 150,
               child: graphic.Chart(
                 data: [
-                  {'category': 'Fertilizante', 'value': 10},
-                  {'category': 'Oxigenación', 'value': 25},
-                  {'category': 'Gérmenes', 'value': 80},
-                  {'category': 'Conductividad', 'value': 50},
+                  {'category': 'Oxydenation: ${sensor?.oxygenation}', 'value': sensor?.oxygenation},
+                  {'category': 'Hydration: ${sensor?.hydration}', 'value': sensor?.hydration},
+                  {'category': 'Water Level: ${sensor?.waterLevel}', 'value': sensor?.waterLevel},
                 ],
                 variables: {
                   'category': graphic.Variable(
@@ -64,9 +69,9 @@ class DashboardScreen extends StatelessWidget {
               height: 150,
               child: graphic.Chart(
                 data: [
-                  {'date': 'Sep 22', 'temp1': 60, 'temp2': 62},
-                  {'date': 'Sep 29', 'temp1': 75, 'temp2': 70},
-                  {'date': 'Oct 6', 'temp1': 80, 'temp2': 78},
+                  {'date': 'Sep 22', 'temp1': 60, 'temp2': sensor?.temperature},
+                  {'date': 'Sep 29', 'temp1': sensor?.temperature, 'temp2': 70},
+                  {'date': 'Oct 6', 'temp1': 80, 'temp2': sensor?.temperature},
                 ],
                 variables: {
                   'date': graphic.Variable(

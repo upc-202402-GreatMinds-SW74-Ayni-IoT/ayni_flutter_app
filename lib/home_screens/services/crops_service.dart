@@ -1,13 +1,12 @@
 import 'dart:convert';
-import 'dart:ffi';
+
 import 'dart:io';
 
 import 'package:ayni_flutter_app/home_screens/models/crops.dart';
 import 'package:http/http.dart' as http;
 
-/// Clase de servicio para la gestión de cultivos a través de la API.
+
 class CropsService {
-  /// Base URL para la API de cultivos.
   final String baseUrl = "https://ayni-v1.sfo1.zeabur.app/api/v1/crops";
 
   /// Obtiene una lista paginada de cultivos desde la API.

@@ -1,9 +1,9 @@
-import 'package:ayni_flutter_app/home_screens/models/crops.dart';
+
 import 'package:ayni_flutter_app/home_screens/models/sensor.dart';
 import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart' as graphic;
 
-import '../../home_screens/services/crops_service.dart';
+
 
 class DashboardScreen extends StatelessWidget {
   final Sensor? sensor;

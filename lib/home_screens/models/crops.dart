@@ -13,16 +13,16 @@ class Crops {
 
   const Crops(
       {required this.id,
-      required this.name,
-      required this.pickUpWeed,
-      required this.fertilizeCrop,
-      required this.oxygenateCrop,
-      required this.makeCropLine,
-      required this.makeCropHole,
-      required this.wateringDays,
-      required this.pestCleanupDays,
-      required this.productId,
-      required this.userId});
+        required this.name,
+        required this.pickUpWeed,
+        required this.fertilizeCrop,
+        required this.oxygenateCrop,
+        required this.makeCropLine,
+        required this.makeCropHole,
+        required this.wateringDays,
+        required this.pestCleanupDays,
+        required this.productId,
+        required this.userId});
 
   Crops.fromJson(Map<String, dynamic> map)
       : id = map["id"],

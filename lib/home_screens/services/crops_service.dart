@@ -1,12 +1,12 @@
 import 'dart:convert';
+
 import 'dart:io';
 
 import 'package:ayni_flutter_app/home_screens/models/crops.dart';
 import 'package:http/http.dart' as http;
 
-/// Clase de servicio para la gestión de cultivos a través de la API.
+
 class CropsService {
-  /// Base URL para la API de cultivos.
   final String baseUrl = "https://ayni-v1.sfo1.zeabur.app/api/v1/crops";
 
   /// Obtiene una lista paginada de cultivos desde la API.
@@ -48,5 +48,25 @@ class CropsService {
 
     // Retorna true si la respuesta tiene el código de éxito 201 (creado)
     return response.statusCode == HttpStatus.created;
+  }
+
+  /// Obtiene un cultivo específico por su [id].
+  ///
+  /// Retorna un objeto [Crops] si el cultivo existe, o `null` si no se encuentra.
+  Future<Crops?> getCropById(int id) async {
+    try {
+      final response = await http.get(Uri.parse("$baseUrl/$id"));
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        return Crops.fromJson(data);
+      } else {
+        print("Error: Código de estado ${response.statusCode}");
+        return null;
+      }
+    } catch (e) {
+      print("Error al obtener el cultivo: $e");
+      return null;
+    }
   }
 }
